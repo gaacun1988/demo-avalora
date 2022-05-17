@@ -1,24 +1,4 @@
 # Starter pipeline
-
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: './'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: 'demo-avalora-veracode'
-    replaceExistingArchive: true
-
-- task: Veracode@3
-  inputs:
-    ConnectionDetailsSelection: 'Credentials'
-    apiId: '3b8a9529d0a6c2484c6481c0ca1a5fd0'
-    apiKey: '22b765f08318f5a14f046b97c704e0721fbc88757ee51ff68047043d143b21d1534b1301835412168682baeb1981a6e8354155373b386e3c63863b4f867757be'
-    veracodeAppProfile: 'Demo POC veracode'
-    version: '$(build.buildNumber)'
-    filepath: './demo-avalora-veracode'
-    sandboxName: 'Damian_Figueroa'
-    maximumWaitTime: '360'
-  
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -30,10 +10,21 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: './'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: 'demo-avalora-veracode'
+    replaceExistingArchive: true
+- task: Veracode@3
+  inputs:
+    ConnectionDetailsSelection: 'Credentials'
+    apiId: '3b8a9529d0a6c2484c6481c0ca1a5fd0'
+    apiKey: '22b765f08318f5a14f046b97c704e0721fbc88757ee51ff68047043d143b21d1534b1301835412168682baeb1981a6e8354155373b386e3c63863b4f867757be'
+    veracodeAppProfile: 'Demo POC veracode'
+    version: '$(build.buildNumber)'
+    filepath: './demo-avalora-veracode'
+    sandboxName: 'Damian_Figueroa'
+    maximumWaitTime: '360'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
