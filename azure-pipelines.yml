@@ -24,7 +24,7 @@ steps:
     apiKey: '22b765f08318f5a14f046b97c704e0721fbc88757ee51ff68047043d143b21d1534b1301835412168682baeb1981a6e8354155373b386e3c63863b4f867757be'
     veracodeAppProfile: 'Demo POC veracode'
     version: '$(build.buildNumber)'
-    filepath: './demo-avalora-veracode'
+    filepath: './demo-avalora-veracode.zip'
     sandboxName: 'Damian_Figueroa'
     maximumWaitTime: '360'
 
