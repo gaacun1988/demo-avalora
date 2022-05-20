@@ -26,5 +26,6 @@ steps:
     version: '$(build.buildNumber)'
     filepath: './demo-avalora-veracode.zip'
     sandboxName: 'Damian_Figueroa'
+    importResults: true
     maximumWaitTime: '360'
 
