@@ -24,6 +24,6 @@ steps:
     version: '$(build.buildNumber)'
     filepath: './demo-avalora-veracode.zip'
     sandboxName: 'Gabriel Acuna'
-    importResults: true
+    importResults: false
     maximumWaitTime: '360'
 
