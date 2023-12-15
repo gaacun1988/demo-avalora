@@ -20,12 +20,12 @@ steps:
 - task: Veracode@3
   inputs:
     ConnectionDetailsSelection: 'Credentials'
-    apiId: '3b8a9529d0a6c2484c6481c0ca1a5fd0'
-    apiKey: '22b765f08318f5a14f046b97c704e0721fbc88757ee51ff68047043d143b21d1534b1301835412168682baeb1981a6e8354155373b386e3c63863b4f867757be'
+    apiId: '2af1a2b43594c073e8854eeef17bb0cb'
+    apiKey: '015e5e62e52620215df760ec55b099ab7b855b6dc730a27b3ec7472207a0f53ade187c2a63767c621a3552d10a00b6d10d02ddb8270531624667447bb964ab56'
     veracodeAppProfile: 'Demo POC veracode'
     version: '$(build.buildNumber)'
     filepath: './demo-avalora-veracode.zip'
-    sandboxName: 'Damian_Figueroa'
+    sandboxName: 'Gabriel Acuna'
     importResults: true
     maximumWaitTime: '360'
 
